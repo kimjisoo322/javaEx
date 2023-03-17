@@ -26,6 +26,8 @@ public class Casting {
 		System.out.println(intValue);  
 		
 		System.out.println("수정");
+		
+		System.out.println("집에서 수정");
 
 	}
 
