@@ -13,6 +13,9 @@ public class BmiEx {
 		
 		//새로운 추가 2 
 		
+		//새로운 추가 3 
+		System.out.println("학원");
+		
 	}
 
 }
