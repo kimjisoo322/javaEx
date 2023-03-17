@@ -11,6 +11,7 @@ public class BmiEx {
 		
 		System.out.println(money);
 		
+		//새로운 추가 2 
 		
 	}
 
