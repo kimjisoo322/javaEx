@@ -24,6 +24,8 @@ public class Casting {
 		System.out.println("==========================");
 		System.out.println(byteValue); // 값을 초과하면 로테이션 됨. 
 		System.out.println(intValue);  
+		
+		System.out.println("수정");
 
 	}
 
