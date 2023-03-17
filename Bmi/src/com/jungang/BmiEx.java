@@ -12,7 +12,14 @@ public class BmiEx {
 		System.out.println(money);
 		
 		//새로운 추가 2 
-		//새로운 추가 3
+<<<<<<< HEAD
+		
+=======
+		
+		//새로운 추가 3 
+		System.out.println("학원");
+		
+>>>>>>> branch 'master' of https://github.com/kimjisoo322/javaEx.git
 	}
 
 }
