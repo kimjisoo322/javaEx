@@ -30,9 +30,16 @@ public class NonStaticSample {
 	}
 	//임의의 알파벳을 하나 리턴
 	public char alphabette() {
-		//char[] alpha = new
+		int num = 0;
 		
-		return 'a';
+		 while(true) {
+			 num =(int) Math.random()+58 * 65;
+			 
+			 if(num >= 'a' && num <= 'z' || num >= 'A' && num <= 'Z'){
+				 break;
+			 } 
+		 }
+		return (char) num;
 	}
 	
 	//문자열과 시작인덱스, 끝인덱스를 전달받아
@@ -40,8 +47,7 @@ public class NonStaticSample {
 	public String mySubstring(String str, int index1, int index2) {
 		
 		String input = str.substring(index1, index2);
-		return "4. " + str + "의 " + index1 +"번 "+index2 + "번 "
-				     +"인덱스 사이의 값 출력 : " + input;
+		return input;
 		
 	
 	}

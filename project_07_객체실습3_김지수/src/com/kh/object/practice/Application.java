@@ -9,9 +9,9 @@ public class Application {
 		
 		ns.outputChar(5, 'a');
 		
-		//ns.alphabette();
+		System.out.println("랜덤 영문자 출력: "+ ns.alphabette());
 		
-		System.out.println(ns.mySubstring("apple", 2, 4));
+		System.out.println("4. apple의 2번 4번 인덱스 사이의 값 출력:"+ ns.mySubstring("apple", 2, 4));
 		
 	}
 
