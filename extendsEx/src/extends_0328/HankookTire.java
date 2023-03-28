@@ -1,4 +1,4 @@
-package sec02.exam03;
+package extends_0328;
 
 public class HankookTire {
 	public HankookTire (String location, int maxRotaion) {
