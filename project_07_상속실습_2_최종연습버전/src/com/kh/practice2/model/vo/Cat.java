@@ -10,8 +10,10 @@ public class Cat extends Animal{
 	
 	public Cat(String name, String kinds, String location, String color) {
 		super(name, kinds);     //부모 생성자 호출 
-		setLocation(location);  //내가 가지고 있는 값으로 필드를 초기화 > set 
-		setColor(color);
+		this.color =color;
+		this.location=location;
+		//setLocation(location);  //내가 가지고 있는 값으로 필드를 초기화 > set 
+		//setColor(color);
 	}
 
 	@Override
