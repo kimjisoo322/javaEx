@@ -13,7 +13,7 @@ public class Person {
 	}
 	
 	public Person(int age, double height, double weight) {
-		super();
+		//super();
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
