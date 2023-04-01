@@ -24,7 +24,7 @@ public class StringEx2 {
 		str.indexOf("프로");
 		
 		System.out.println(str.indexOf("자바"));
-		System.out.println(str.indexOf("얍"));
+		System.out.println("+" +str.indexOf("얍"));
 		
 		//substring과 함께 사용될 수 있다. 
 		System.out.println(str.substring(str.indexOf("프로")));
@@ -52,6 +52,7 @@ public class StringEx2 {
 		ssn.subSequence(0, 5);
 		System.out.println("=============원하는 주민번호 =============");
 		System.out.println(ssn.substring(6));
+		System.out.println("추가"+ssn.subSequence(0, 5));
 		
 		//문자 교체
 		str = "자바는 객체지향 언어입니다. 자바를 자바봅시다.";

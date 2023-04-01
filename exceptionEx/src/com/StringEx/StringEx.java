@@ -9,6 +9,8 @@ public class StringEx {
 		//str이 가지고 있는 값을 byte[]로 반환
 		String str  = "hello";
 		str.getBytes();
+		
+		
 	
 		byte[] byteArr = str.getBytes();
 		byte[] byteArr2 = {67,68,69};

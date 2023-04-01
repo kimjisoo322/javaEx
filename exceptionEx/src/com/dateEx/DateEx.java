@@ -47,7 +47,7 @@ public class DateEx {
 	//데이터 포맷 : 날짜를 입력받아서 원하는 형식으로 출력 
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss:SSS초");
 	String format = sdf.format(now);
-	System.out.println(format);
+	System.out.println("simpledateformat: "+ format);
 	
 	sdf = new SimpleDateFormat("yyyy-MM-dd");
 	System.out.println(sdf.format(now));
