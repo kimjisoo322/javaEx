@@ -45,6 +45,13 @@ public class Library {
 	 * : 외부로 받은 데이터를 바탕으로 1_책을 생성하고 2_리스트에 추가 3_리스트를 파일에 저장(파일=dao)
 	 */
 	public boolean insert(int no, String title, String author, boolean isRent) {
+   //23_1 중복체크 
+		for(Book book: bookList) {
+			if(book.getNo() == no) {
+				System.out.println("중복되는 일련번호가 존재합니다.");
+			}return false;
+		}
+		
 		Book book = new Book(no, title, author, isRent);
 		bookList.add(book);
 		boolean res = dao.fileSave(bookList);
