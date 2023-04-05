@@ -16,4 +16,10 @@ public class DBDao implements Dao{
 		return false;
 	}
 
+	@Override
+	public int deleteBook(List<Book> bookList) {
+		return 0;
+	}
+
+
 }

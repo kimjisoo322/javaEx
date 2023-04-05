@@ -1,6 +1,7 @@
 package com.library;
 
 import java.util.List;
+import java.util.Scanner;
 
 import com.library.dao.FileDao;
 import com.library.vo.Book;
@@ -21,6 +22,11 @@ public class Application {
 			System.out.println(book.toString());
 		}
 		*/
+		Scanner scan = new Scanner(System.in);
+		
+		Application app  = new Application();
+		
+		
 		
 		//21. library 생성
 		Library lib = new Library();
@@ -31,7 +37,11 @@ public class Application {
 		System.out.println("추가 테스트 =========");
 		System.out.println(lib.toString());
 		
-		
+		//도서 삭제 
+		int no = 0;
+		System.out.println("삭제할 책의 일련번호");
+		no = scan.nextInt();
+		lib.removeBook(no);
 		
 		
 		

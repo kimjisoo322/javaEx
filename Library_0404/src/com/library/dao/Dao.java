@@ -13,5 +13,8 @@ public interface Dao {
 	//23. 리스트를 파일에 저장하기 위해서 추상메서드 생성
 	boolean fileSave(List<Book> bookList);
 	
+	//도서 삭제 
+	int deleteBook(List<Book> bookList);
+	
 	
 }

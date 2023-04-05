@@ -64,4 +64,20 @@ public class Library {
 		}
 	
 	}
+	
+	
+	//책 삭제
+	public boolean removeBook(int index) {
+		for(Book book : bookList) {
+			if(book.getNo() == index) {
+				dao.deleteBook(bookList);
+				bookList.remove(book);
+				return true;
+			}
+		}
+		//인덱스에 있는걸 찾지 못한 경우
+		dao.fileSave(bookList);
+		return false;
+	}
+	
 }

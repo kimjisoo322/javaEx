@@ -118,7 +118,12 @@ public class FileDao implements Dao{
 		}
 		//파일 출력 실패
 		return false;
-	} 
+	}
+	@Override
+	public int deleteBook(List<Book> bookList) {
+		
+		return 0;
+	}
 	
 
 }
