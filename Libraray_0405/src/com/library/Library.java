@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import com.library.dao.DBDao;
 import com.library.dao.Dao;
 import com.library.dao.FileDao;
 import com.library.vo.Book;
@@ -29,9 +30,19 @@ public class Library {
 		System.out.println(toString());
 	}
 	
+	
+	Library(String daotype){
+		if(daotype.equals("DB")) {
+			dao = new DBDao();
+		}
+		//필드 = list를 초기화 
+		list = dao.getList();
+		System.out.println(toString());
+	}
+	
+	
+	
 	//list를  출력하기 위한 toString 재정의
-	
-	
 	@Override // 사용자에게 보여주기 위한 
 	public String toString() {
 		System.out.println("책 목록 ==============");
@@ -131,6 +142,15 @@ public class Library {
 					book.setRent(true);
 					//파일로 출력
 					boolean res = dao.listToFile(list);
+//0407				//DB로 업데이트!!
+					int i = dao.update(no);
+					if(i>0) {
+						System.out.println(i + "건 처리되었습니다.");
+					}else {
+						System.out.println("처리도중 오류가 발생하였습니다.");
+						book.setRent(false);
+					}
+					
 					if(!res) {
 						book.setRent(false);
 						System.err.println("파일로 출력하는데 실패했습니다.");
@@ -158,6 +178,8 @@ public class Library {
 				if(book.isRent()) { // 도서가 대여중이라면 true인 상태
 					book.setRent(false);
 					dao.listToFile(list);
+					//DB로 업데이트 로직 호출
+					dao.update(no);
 					System.out.println("반납되었습니다.");
 					System.out.println(toString());
 					return true;

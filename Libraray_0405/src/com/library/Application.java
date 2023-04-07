@@ -12,7 +12,7 @@ public class Application {
 	public static void main(String[] args) {
 		
 		//도서관을 생성해서 파일을 읽어오도록 함. 
-		Library lib = new Library();
+		Library lib = new Library("DB");
 		
 		Application app = new Application();
 		//app을 생성하지 않고 getString(), getInt() 메서드를 사용할 수 없다. 
