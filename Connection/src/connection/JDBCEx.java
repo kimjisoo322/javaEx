@@ -14,7 +14,7 @@ import java.util.List;
 public class JDBCEx {
 	public static void main(String[] args) {
 		JDBCEx ex = new JDBCEx();
-		ex.connectionTest();
+	//	ex.connectionTest();
 		ex.getList();
 		//ex.insertBook();
 		//ex.deleteBook();
@@ -43,11 +43,10 @@ public class JDBCEx {
 						
 						//3. 쿼리실행
 						Statement stmt = conn.createStatement();
-						
 						//4. 데이터 조회 executeQuer(쿼리문장 입력)  >> sql에서 쿼리 실행 후 정상적이면 세미콜론 빼고 가져옴
 						//5. ResultSet : 결과 집합 
 						//6. rs.next() , rs.getString() 조회
-						ResultSet rs = stmt.executeQuery("select * from book");
+						ResultSet rs = stmt.executeQuery("select count(*) from book");
 						rs.next();
 						System.out.println("조회결과 : " + rs.getString(1));
 						
@@ -86,8 +85,7 @@ public class JDBCEx {
 				Statement stmt = conn.createStatement();
 				
 				//데이터 조회  (* sql에서 쿼리를 실행해보고 정상적이면 세미콜론을 버리고 가져옴 * )
-				ResultSet rs = stmt.executeQuery("select*from book\r\n"
-						+ "order by book_no asc");
+				ResultSet rs = stmt.executeQuery("SELECT * FROM BOOK");
 				//
 				
 				//결과 집합 가져오기 ( sql에서 조회된 결과들이 곧 결과 집합 ) 
